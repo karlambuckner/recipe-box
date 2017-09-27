@@ -5,6 +5,7 @@ require("pg")
 require("sinatra/activerecord")
 require("recipe")
 require('tag')
+require('ingredient')
 
 RSpec.configure do |config|
   config.after(:each) do
