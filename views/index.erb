@@ -1,0 +1,17 @@
+<h1>Recipe Box</h1>
+
+<h2>Add a recipe name below</h2>
+
+<form action="/" method="post">
+
+  <div class="form-group">
+    <label for="name">Enter the name of your recipe:</label>
+    <input type="text" name="name" class='form-control'>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add recipe name</button>
+</form>
+<br>
+<% @recipes.each do |recipe| %>
+  <li><a href="/recipe/<%=recipe.id%>"><%= recipe.name %></a></li>
+<% end %>

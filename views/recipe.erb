@@ -1,0 +1,20 @@
+<h1><%= @recipe.name %></h1>
+
+<h2>Now add the ingredients for your recipe.</h2>
+
+<form action="/recipe/<%= @recipe.id %>" method="post">
+  <label for="ingredient"></label>
+  <input type="text" name="ingredient" class="form-control">
+  <br>
+  <button type="submit" class='btn btn-success'>Add ingredient</button>
+</form>
+
+<% @ingredients.each do |ingredient| %>
+  <li><a href="/ingredient/<%=ingredient.item%>"><%= ingredient.item %></a></li>
+<% end %>
+<br>
+<br>
+<div class="container">
+  <a href="/"><button class="btn">Return Home</a>
+</div>
+<br>
